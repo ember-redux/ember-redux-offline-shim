@@ -1,7 +1,11 @@
 module.exports = {
   afterInstall: function () {
     return this.addPackagesToProject([
-      {name: 'redux-offline', target: '2.0.0'}
+      {name: 'redux-offline', target: '2.0.0'},
+      {name: 'babel-plugin-transform-class-properties', target: '6.24.1'},
+      {name: 'babel-plugin-transform-object-rest-spread', target: '6.23.0'},
+      {name: 'babel-plugin-transform-flow-strip-types', target: '6.22.0'},
+      {name: 'babel-preset-latest', target: '6.24.1'}
     ])
   },
 

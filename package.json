@@ -1,6 +1,6 @@
 {
   "name": "ember-redux-offline-shim",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "redux offline shim for ember-cli",
   "keywords": [
     "ember-addon",

@@ -1,27 +1,21 @@
 # ember-redux-offline-shim
 
-This README outlines the details of collaborating on this Ember addon.
+babel 6 is required so please use ember-cli v2.13.0+
 
-## Installation
+ember install ember-lodash-es-shim
+ember install ember-json-stringify-safe-shim
+ember install ember-redux-persist-shim
+ember install ember-redux-offline-shim
 
-* `git clone <repository-url>` this repository
-* `cd ember-redux-offline-shim`
-* `npm install`
-* `bower install`
+In your app/index.html be sure to hack in 2 globals :(
 
-## Running
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-## Running Tests
-
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+    <script>
+      var process = {
+        env: {
+          NODE_ENV: 'development'
+        }
+      };
+      var global = {
+        setImmediate: window.setTimeout
+      }
+    </script>

@@ -1,6 +1,6 @@
 {
   "name": "ember-redux-offline-shim",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "redux offline shim for ember-cli",
   "keywords": [
     "ember-addon",
@@ -30,6 +30,7 @@
     "broccoli-merge-trees": "^1.1.4",
     "ember-cli-babel": "^6.0.0-beta.3",
     "broccoli-babel-transpiler": "6.0.0-alpha.1",
+    "broccoli-metal": "^1.0.0",
     "flow-bin": "^0.42.0"
   },
   "devDependencies": {

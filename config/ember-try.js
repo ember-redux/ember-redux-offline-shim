@@ -1,43 +1,32 @@
-/* eslint-env node */
 module.exports = {
   scenarios: [
     {
-      name: 'ember-lts-2.4',
+      name: 'default',
+      bower: {
+        dependencies: { }
+      }
+    },
+    {
+      name: 'ember-2-4',
       bower: {
         dependencies: {
-          'ember': 'components/ember#lts-2-4'
+          'ember': '~2.4.0'
         },
         resolutions: {
-          'ember': 'lts-2-4'
-        }
-      },
-      npm: {
-        devDependencies: {
-          'ember-source': null
+          'ember': '~2.4.0'
         }
       }
     },
     {
-      name: 'ember-lts-2.8',
+      name: 'ember-2-8',
       bower: {
         dependencies: {
-          'ember': 'components/ember#lts-2-8'
+          'ember': '~2.8.0'
         },
         resolutions: {
-          'ember': 'lts-2-8'
+          'ember': '~2.8.0'
         }
-      },
-      npm: {
-        devDependencies: {
-          'ember-source': null
-        }
-      }
-    },
-    {
-      name: 'ember-default',
-      npm: {
-        devDependencies: {}
       }
     }
   ]
-};
+}

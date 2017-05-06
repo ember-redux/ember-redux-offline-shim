@@ -4,7 +4,6 @@
 const metal = require('broccoli-metal');
 const mergeTrees = require('broccoli-merge-trees');
 const path = require('path');
-const esTranspiler = require('broccoli-babel-transpiler');
 
 module.exports = {
   name: 'redux-offline',
@@ -22,15 +21,22 @@ module.exports = {
   treeForAddon (tree) {
     const offlinePath = path.dirname(require.resolve('redux-offline/src/index.js'));
 
-    var offlineTree = esTranspiler(offlinePath, {
-      plugins: [
-        'transform-object-rest-spread',
-        'transform-class-properties',
-        'transform-flow-strip-types'
-      ],
-      presets: [
-          ['latest', 'react']
-      ]
+    let addon = this.addons.find(addon => addon.name === 'ember-cli-babel');
+    let offlineTree = addon.transpileTree(offlinePath, {
+      babel: {
+        plugins: [
+          'transform-object-rest-spread',
+          'transform-class-properties',
+          'transform-flow-strip-types'
+        ],
+        presets: [
+          'latest',
+          'react'
+        ]
+      },
+      'ember-cli-babel': {
+        compileModules: false
+      }
     });
 
     const offlineTreeWithEmberFetch = this.importEmberFetch(offlineTree);

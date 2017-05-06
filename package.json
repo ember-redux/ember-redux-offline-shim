@@ -29,7 +29,6 @@
     "babel-preset-react": "^6.16.0",
     "broccoli-merge-trees": "^1.1.4",
     "ember-cli-babel": "^6.1.0",
-    "broccoli-babel-transpiler": "6.0.0-alpha.1",
     "broccoli-metal": "^1.0.0",
     "flow-bin": "^0.42.0"
   },

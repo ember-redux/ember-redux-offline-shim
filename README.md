@@ -9,7 +9,7 @@ ember install ember-redux
 ember install ember-fetch
 ember install ember-lodash-es-shim
 ember install ember-json-stringify-safe-shim
-ember install ember-redux-offline-shim
+ember install ember-redux-persist-shim
 ember install ember-redux-offline-shim
 ```
 
